@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="product"
+            type="com.bwie.test1102.Product"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:onClick="@{product.click}"
+            app:icon="@{product.icon}"
+            android:id="@+id/iv"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:padding="6dp"/>
+
+        <TextView
+            android:text="@{product.title}"
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv"
+            android:ellipsize="end"
+            android:maxLines="3"/>
+
+    </RelativeLayout>
+</layout>
